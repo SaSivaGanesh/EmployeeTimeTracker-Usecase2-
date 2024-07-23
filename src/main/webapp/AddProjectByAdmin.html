@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add Project Information</h2>
+    <form class="projectForm"  action="AddProjectServlet" method="post">>
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="projectName" name="projectName" required>
+        
+        <label for="projectDescription">Project Description:</label>
+        <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+        
+        <label for="programmingLanguages">Programming Languages Involved (comma-separated):</label>
+        <input type="text" id="programmingLanguages" name="programmingLanguages" required>
+        
+        <label for="Status">Project Status :</label>
+        <input type="text" id="Status" name="Status" required>
+        <label for="Assosiate">Assosiate Name:</label>
+        <input type="text" id="Status" name="Assosiate" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

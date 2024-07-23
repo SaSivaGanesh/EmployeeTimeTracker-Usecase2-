@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .logout-button {
+      background-color: #ff9900;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .logout-button:hover {
+      background-color: #ff6600;
+    }
+    .button-group {
+      margin-top: 20px;
+    }
+    .button-group button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button-group button:hover {
+      background-color: #eee;
+    }
+    .button-group button.active {
+      background-color: #337ab7;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Admin Dashboard</h1>
+      <form action="LogoutServlet">
+        <button class="logout-button" type="submit">Logout</button>
+      </form>
+    </div>
+    <div class="button-group">
+      <form action="EmployeeCreationByAdmin.html">
+        <button type="submit" class="active">Create Employee</button>
+      </form>
+      <br>
+      <div class="button-group">
+      <form action="ViewEmployeeServlet" method="post">
+        <button type="submit" class="active">View Employees</button>
+      </form>
+      <br>
+      <div class="button-group">
+      <form action="AddProjectByAdmin.html" method="post">
+        <button type="submit" class="active">Add Project</button>
+      </form>
+      <br>
+    <!--  <div class="button-group">
+      <form action="/Employee_time_tracker/ViewProjectServlet" method="post">
+        <button type="submit" class="active">View Projects</button>
+      </form>-->
+      <br>
+      <div class="button-group">
+      <form action="/Employee_time_tracker/EditProjectServlet" method="post">
+        <button type="submit" class="active">Edit Projects</button>
+      </form>
+      <br>
+      <form action="viewWorkStatus.html">
+        <button type="submit" class="active">View Work Status</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
